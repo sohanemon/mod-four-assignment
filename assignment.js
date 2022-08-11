@@ -44,14 +44,17 @@ function isBestFriend(person1, person2) {
 /* --------------------------------------------------------------------- */
 
 /* -------------------------------- dev -------------------------------- */
-console.log(oilPrice(1, 3, 2));
+console.log(oilPrice(1, 1, 1));
+console.log(oilPrice(30, 20, 10));
+console.log(oilPrice(1, 0, 2));
+console.log(oilPrice(0, 2, 3));
 /* -------------------------------- dev -------------------------------- */
 
-function oilPrice(petrol, diesel, octane) {
-  const petrolPrice = 120;
-  const dieselPrice = 130;
-  const octanePrice = 150;
-  return petrol * petrolPrice + diesel * dieselPrice + octane * octanePrice;
+function oilPrice(diesel, petrol, octane) {
+  const dieselPrice = 114;
+  const petrolPrice = 130;
+  const octanePrice = 135;
+  return diesel * dieselPrice + petrol * petrolPrice + octane * octanePrice;
 }
 
 /* --------------------------------------------------------------------- */
