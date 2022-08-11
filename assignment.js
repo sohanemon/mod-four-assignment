@@ -17,22 +17,9 @@ console.log(isBestFriend(person1, person2));
 
 function isBestFriend(person1, person2) {
   if (typeof person1 !== "object" || typeof person2 !== "object") {
-    console.log("Function requires object. Program exiting");
-    return;
+    return "Function requires object. Program exiting";
   }
-  if (
-    typeof person1.name !== "string" ||
-    typeof person2.name !== "string" ||
-    typeof person1.friend !== "string" ||
-    typeof person2.friend !== "string"
-  ) {
-    console.log("Person name is not a string. Program exiting");
-    return;
-  }
-  if (
-    person1.name?.toLowerCase() === person2.friend?.toLowerCase() &&
-    person2.name?.toLowerCase() === person1.friend?.toLowerCase()
-  )
+  if (person1.name === person2.friend && person2.name === person1.friend)
     return true;
   else return false;
 }
@@ -65,8 +52,7 @@ function oilPrice(diesel, petrol, octane) {
 
 function radianToDegree(rad) {
   if (typeof rad !== "number") {
-    console.log("Please enter an integer value. Program Exiting");
-    return;
+    return "Please enter an integer value. Program Exiting";
   }
   return ((rad * 180) / Math.PI).toFixed(2);
 }
@@ -83,10 +69,11 @@ console.log(radianToDegree(199));
 
 function isJavaScriptFile(file) {
   if (typeof file !== "string") {
-    console.log("Please enter a string value. Program Exiting");
-    return;
+    return "Please enter a string value. Program Exiting";
   }
-  return file.toLowerCase().endsWith(".js") ? true : false;
+  if (file.endsWith(".js")) {
+    return true;
+  } else return false;
 }
 console.log(isJavaScriptFile("apps.js"));
 /* --------------------------------------------------------------------- */
@@ -97,8 +84,7 @@ console.log(isJavaScriptFile("apps.js"));
 
 function publicBusFare(peoples) {
   if (typeof peoples !== "number") {
-    console.log("please enter a valid  number");
-    return;
+    return "please enter a valid  number";
   }
   const afterBusRemains = peoples % 50;
   const afterMicroBusRemains = afterBusRemains % 11;
