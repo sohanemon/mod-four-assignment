@@ -68,7 +68,7 @@ function radianToDegree(rad) {
     console.log("Please enter an integer value. Program Exiting");
     return;
   }
-  return ((rad * Math.PI) / 180).toFixed(2);
+  return ((rad * 180) / Math.PI).toFixed(2);
 }
 
 console.log(radianToDegree(10));
@@ -89,3 +89,21 @@ function isJavaScriptFile(file) {
   return file.toLowerCase().endsWith(".js") ? true : false;
 }
 console.log(isJavaScriptFile("apps.js"));
+/* --------------------------------------------------------------------- */
+
+/* --------------------------------------------------------------------- */
+/*                      public bus fare calculation                      */
+/* --------------------------------------------------------------------- */
+
+function publicBusFare(peoples) {
+  if (typeof peoples !== "number") {
+    console.log("please enter a valid  number");
+    return;
+  }
+  const afterBusRemains = peoples % 50;
+  const afterMicroBusRemains = afterBusRemains % 11;
+  return 250 * afterMicroBusRemains;
+}
+console.log(publicBusFare(365));
+
+/* --------------------------------------------------------------------- */
