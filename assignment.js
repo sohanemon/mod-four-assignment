@@ -4,9 +4,8 @@ function radianToDegree(rad) {
   if (typeof rad !== "number") {
     return "Please enter an integer value. Program Exiting";
   }
-  return ((rad * 180) / Math.PI).toFixed(2);
+  return parseFloat(((rad * 180) / Math.PI).toFixed(2));
 }
-
 /*                 check a file whether javascript or not                */
 
 function isJavaScriptFile(file) {
