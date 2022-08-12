@@ -48,4 +48,3 @@ function publicBusFare(peoples) {
   const afterMicroBusRemains = afterBusRemains % 11;
   return 250 * afterMicroBusRemains;
 }
-console.log(publicBusFare(365));
