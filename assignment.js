@@ -1,19 +1,4 @@
-/* --------------------------------------------------------------------- */
 /*             find between two person are best friend or not            */
-/* --------------------------------------------------------------------- */
-
-/* -------------------------------- dev -------------------------------- */
-const person1 = {
-  name: "rony",
-  friend: "bony",
-};
-const person2 = {
-  name: "Bony",
-  friend: "rony",
-};
-
-console.log(isBestFriend(person1, person2));
-/* -------------------------------- dev -------------------------------- */
 
 function isBestFriend(person1, person2) {
   if (typeof person1 !== "object" || typeof person2 !== "object") {
@@ -24,18 +9,7 @@ function isBestFriend(person1, person2) {
   else return false;
 }
 
-/* --------------------------------------------------------------------- */
-
-/* --------------------------------------------------------------------- */
 /*                         oil price computation                         */
-/* --------------------------------------------------------------------- */
-
-/* -------------------------------- dev -------------------------------- */
-console.log(oilPrice(1, 1, 1));
-console.log(oilPrice(30, 20, 10));
-console.log(oilPrice(1, 0, 2));
-console.log(oilPrice(0, 2, 3));
-/* -------------------------------- dev -------------------------------- */
 
 function oilPrice(diesel, petrol, octane) {
   const dieselPrice = 114;
@@ -44,11 +18,7 @@ function oilPrice(diesel, petrol, octane) {
   return diesel * dieselPrice + petrol * petrolPrice + octane * octanePrice;
 }
 
-/* --------------------------------------------------------------------- */
-
-/* --------------------------------------------------------------------- */
 /*                      radianToDegree calculation,                      */
-/* --------------------------------------------------------------------- */
 
 function radianToDegree(rad) {
   if (typeof rad !== "number") {
@@ -57,15 +27,7 @@ function radianToDegree(rad) {
   return ((rad * 180) / Math.PI).toFixed(2);
 }
 
-console.log(radianToDegree(10));
-console.log(radianToDegree(25));
-console.log(radianToDegree(199));
-
-/* --------------------------------------------------------------------- */
-
-/* --------------------------------------------------------------------- */
 /*                 check a file whether javascript or not                */
-/* --------------------------------------------------------------------- */
 
 function isJavaScriptFile(file) {
   if (typeof file !== "string") {
@@ -75,12 +37,8 @@ function isJavaScriptFile(file) {
     return true;
   } else return false;
 }
-console.log(isJavaScriptFile("apps.js"));
-/* --------------------------------------------------------------------- */
 
-/* --------------------------------------------------------------------- */
 /*                      public bus fare calculation                      */
-/* --------------------------------------------------------------------- */
 
 function publicBusFare(peoples) {
   if (typeof peoples !== "number") {
@@ -91,5 +49,3 @@ function publicBusFare(peoples) {
   return 250 * afterMicroBusRemains;
 }
 console.log(publicBusFare(365));
-
-/* --------------------------------------------------------------------- */
